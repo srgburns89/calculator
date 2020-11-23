@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  html {
+    font-size: 24px;
+    font-family: 'Unica One', cursive;
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 0;
+  }
+  
+  #app h1 {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 8px;
+  }
+
+  .calculator {
+    border: 2px solid black;
+    height: 600px;
+    width: 400px;
+    border-radius: 8%;
+    background: black;
+    padding: 15px;
+
+    display: grid;
+    grid-template-rows:180px 1fr;
+  }
+
+
+.display {
+  height: 160px ;
+  background: blue;
+  border: 2px solid white;
+  border-radius: 5%;
+  padding: 5px;;
+  display: grid;
+  
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.held-label{
+  text-decoration: underline;
+  color: white;
+  grid-row: 1;
+  grid-column: 1/9;
+  
+}
+.held-value{
+  grid-row: 2;
+  color: white;
+  
+}
+.next-operation{
+  grid-row: 3;
+  color: white;
+  font-size: 2rem;
+  
+
+}
+.next-value{
+  grid-row: 4;
+  grid-column-start: 6;
+  padding: 3px;
+  color: white;
+  
+}
+
+.controls{
+  grid-row:2;
+  
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+
+  background-color:gray;
+  padding: 2px;
+  border: 2px solid white;
+  border-radius: 5%;
+  grid-gap: 4px
+
+}
+
+.memory {
+  display: grid;
+
+  grid-row: 1 / 1;
+  grid-column: 1 / 4;
+
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 4px;
+}
+
+.clear-all {
+  border: 2px black solid;
+  border-radius: 10px;
+  font-size: ;
+}
+
+.clear-entry {
+ 
+  border: 2px black solid;
+  border-radius: 10px;
+}
+
+.operations {
+  display: grid; 
+
+  grid-row-start:1;
+  grid-row-end: 6;
+  grid-column: 4;
+  grid-gap: 4px
+}
+.operations button {
+  background: green;
+  color: white;
+  border: 2px black solid;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+  
+.digits {
+  display: grid;
+  grid-gap: 4px;
+
+  grid-row: 2 / 6;
+  grid-column: 1 / 4;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1f 1fr 1fr 1fr;
+
+}
+
+.decimal {
+  grid-column: 1;
+}
+.digits button {
+
+  background:black;
+  color: white;
+  border: 2px black solid;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+.zero {
+  grid-column: 2 / 4;
+}
+button.equals {
+  background:orange;
+ 
+}
